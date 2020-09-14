@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection.Metadata;
+
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
@@ -19,6 +21,68 @@ namespace CSharp.Assignments.Loop1
         {
             // enter sentinel inputs
             // then check the palindrome only once.
+
+
+
+
+            int reminder = 0;
+            int reverse = 0;
+            int number = 0;
+            int backup;
+
+
+            do
+
+            {
+
+                Console.WriteLine("Enter 9 positive inetgers");
+                number = int.Parse(Console.ReadLine());
+
+                if (number.ToString().Length == 9)
+                {
+
+                    backup = number;
+
+
+
+
+                    while (backup > 0)
+
+                    {
+                        reminder = backup % 10;
+                        reverse = reverse * 10 + reminder;
+                        backup /= 10;
+
+                    }
+
+
+                    if (number == reverse)
+
+
+                        Console.WriteLine($"{backup} is palindrome number");
+
+
+                    else
+
+                        Console.WriteLine($"{backup} is not palindrome number");
+
+
+                }
+                else
+                    Console.WriteLine("The number is Not 9 digit, enter correct number ");
+
+
+
+            }
+
+            while (number.ToString().Length != 9);
         }
+
+
+        
+
+
+
+
     }
 }

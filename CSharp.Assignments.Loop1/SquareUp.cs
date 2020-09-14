@@ -14,6 +14,43 @@ namespace CSharp.Assignments.Loop1
         public static void Main()
         {
             // Write your codes here
+            Console.WriteLine("Enter number : ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n >= 0)
+            {
+                int i = 0;
+                while (i < n)
+                {
+                    int s = 0;
+                    int x = 0;
+
+                    int f = i * n;
+                    while (f < (i + 1) * n)
+                    {
+                        if (s < n - i - 1)
+                        {
+                            Console.Write("0, ");
+                            
+                            s++;
+                        }
+                        else
+                        {
+
+                            Console.Write((i + 1 - x) + ", ");
+
+                            x++;
+                        }
+                        f++;
+                    }
+                    Console.WriteLine("");
+                    i++;
+                }
+            }
+            else
+                Console.WriteLine("Wrong input number");
+
+            Console.ReadLine();
+
         }
     }
 }

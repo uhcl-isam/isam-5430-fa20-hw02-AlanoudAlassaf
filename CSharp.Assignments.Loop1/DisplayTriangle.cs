@@ -5,7 +5,14 @@ using System.Text;
 namespace CSharp.Assignments.Loop1
 {
     /// <summary>
-    /// Write an app reads two inputs: a character that indicates which pattern to choose ('a' = lower left triangle, 'b' = upper left triangle, 'c' = upper right triangle, 'd' = lower right triangle) and an integer that indicates the number of lines to display. The app will then display the following patterns separately, one below the other. Use for loops to generate patterns. All asterisks (*) should be displayed by a signle statement of the form Console.Write('*'); which causes the asterisks to display side by side. A statement of the form Console.WriteLine(); can be used to move to the next line. A statement of the form COnsole.Write(' '); can be used to display a space for the last two patterns., There should be no other output statements in the app. [Hint: the last two patterns require that each line begin with an appropriate number of blank spaces.
+    /// Write an app reads two inputs: a character that indicates which pattern to choose
+    /// ('a' = lower left triangle, 'b' = upper left triangle, 'c' = upper right triangle, 'd' = lower right triangle) and 
+    /// an integer that indicates the number of lines to display. 
+    /// The app will then display the following patterns separately, one below the other. Use for loops to generate patterns. 
+    /// All asterisks (*) should be displayed by a signle statement of the form Console.Write('*'); which causes the asterisks to display side by side.
+    /// A statement of the form Console.WriteLine(); can be used to move to the next line. 
+    /// A statement of the form COnsole.Write(' '); can be used to display a space for the last two patterns.,
+    /// There should be no other output statements in the app. [Hint: the last two patterns require that each line begin with an appropriate number of blank spaces.
     /// </summary>
     /// <example>
     ///    (a)          (b)         (c)          (d)
@@ -31,6 +38,69 @@ namespace CSharp.Assignments.Loop1
 
             // Write your codes here.
             Console.ReadLine();
+
+
+            if (t == 'a')
+            {
+                for (int i = 1; i <= n; ++i)
+                {
+                    for (int j = 1; j <= i; ++j)
+                        Console.Error.Write("*");
+
+                    Console.Error.WriteLine("");
+                }
+
+
+            }
+            else if (t == 'b')
+            {
+                for (int i = n; i >= 1; --i)
+                {
+                    for (int j = 1; j <= i; ++j)
+                        Console.Error.Write("*");
+
+                    Console.Error.WriteLine("");
+                }
+
+
+            }
+            else if (t == 'c')
+            {
+                for (int i = n; i >= 1; i--)
+                {
+                    for (int j = n - i; j >= 1; j--)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int k = i; k >= 1; k--)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine("");
+                }
+
+            }
+
+            else if (t == 'd')
+            {
+                for (int i = 1; i <= n; i++)
+                {
+                    for (int j = 1; j <= n - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int k = 1; k <= i; k++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine("");
+                }
+
+            }
+
+            Console.ReadLine();
         }
+
     }
+
 }

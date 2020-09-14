@@ -13,6 +13,18 @@ namespace CSharp.Assignments.Loop1
         {
             Console.Error.WriteLine("Enter the value of n");
             // write your codes here.
+            int n = int.Parse(Console.ReadLine());
+            int i = 1;
+            //while
+
+            // if you need a repetition, use while. if you want once or more, use an f statement.
+            while(i <=  n)
+            {
+               
+                Console.WriteLine(i);
+                i++;
+
+            }
         }
     }
 }

@@ -24,6 +24,43 @@ namespace CSharp.Assignments.Loop1
         {
             // get first number and assign it to variable largest
             // write your codes here
+            // declar the variables. 
+
+            int counter = 0;
+            int number;
+            int largest = 0;
+            int largest2 = 0;
+
+            largest = int.MinValue;
+
+            // starting while loop to count the 10 entries. 
+            while (counter < 10)
+            {
+                // prompt the user to enter integer values.
+                Console.WriteLine("Enter an integer value");
+                number = int.Parse(Console.ReadLine());
+                counter++;
+
+                // if statement to assign the first number to the largest variable.
+
+                if (number > largest)
+                {
+                    largest2 = largest;
+                    largest = number;
+
+                }
+
+                else if (number > largest2)
+                {
+                    largest2 = number;
+                }
+
+
+            }
+            Console.WriteLine($"The largest value is {largest}");
+            Console.WriteLine($"The largest value is {largest2}");
+
+
         }
     }
 }
